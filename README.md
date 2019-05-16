@@ -11,6 +11,8 @@ If you get all of the orders right you win the game and all the LEDs will start 
 
 If you don't and you mess up an order then the RED LED will flash twice and you have to start all over (by pressing the start buttons again).
 
+Game time: 15 turns - can adjust in the code by changing game time variable at top.
+
 Enjoy!
 
 
