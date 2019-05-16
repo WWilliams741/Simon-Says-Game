@@ -1,15 +1,6 @@
 # Simon-Says-Game
 Simon Says game using LEDs and Arduino Uno
 
-Credits:
-
-Walker Williams - Programmer, designer, circuit diagram builder and code reorganizer
-
-Jordan McKay - Programmer and designer
-
-Mr. G - Mentor
-
-
 How to play:
 
 Press the GREEN and RED LED buttons at the same time and release them to begin.
@@ -21,3 +12,12 @@ If you get all of the orders right you win the game and all the LEDs will start 
 If you don't and you mess up an order then the RED LED will flash twice and you have to start all over (by pressing the start buttons again).
 
 Enjoy!
+
+
+Credits:
+
+Walker Williams - Programmer, designer, circuit diagram builder and code reorganizer
+
+Jordan McKay - Programmer and designer
+
+Mr. G - Mentor
