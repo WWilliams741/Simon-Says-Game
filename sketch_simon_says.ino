@@ -36,7 +36,7 @@ void setup()
 void loop()
 {
     // Setting game length (in number of turns) and array to store Simon's commands:
-    const uint_least8_t gameTime = 254; // 255 is max, but the < (this + 1) in the for loops changes values and adds bytes. This is high enough.
+    const uint_least8_t gameTime = 15; // 254 is max that you can make this without changing data types, or the compiler changing them for you.
     uint_least8_t gameArray[gameTime];
 
     // Stores how many times we will do the "victory screech!" (victory loop) along with random number enum:
