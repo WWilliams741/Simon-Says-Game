@@ -36,11 +36,11 @@ void setup()
 void loop()
 {
     // Setting game length (in number of turns) and array to store Simon's commands:
-    const uint_least8_t gameTime = 15; // 254 is max that you can make this without changing data types, or the compiler changing them for you.
-    uint_least8_t gameArray[gameTime];
+    const uint_least8_t GAMETIME = 15; // 254 is max that you can make this without changing data types, or the compiler changing them for you.
+    uint_least8_t gameArray[GAMETIME];
 
     // Stores how many times we will do the "victory screech!" (victory loop) along with random number enum:
-    const uint_least8_t victoryScreech = 3;
+    const uint_least8_t VICTORYSCREECH = 3;
     enum RANDNUMS : uint_least8_t
     {
         RAND1,
@@ -65,7 +65,7 @@ void loop()
     uint_least8_t button4 = LOW;
 
     // Randomly assigns values to the game array:
-    for (uint_least8_t setValues = 0; setValues < gameTime; ++setValues)
+    for (uint_least8_t setValues = 0; setValues < GAMETIME; ++setValues)
     {
         gameArray[setValues] = random(RAND1, RAND4 + 1);
     }
@@ -83,7 +83,7 @@ void loop()
     }
 
     // Loop over the game array:
-    for (uint_least8_t mainLoop = 0; mainLoop < gameTime; ++mainLoop)
+    for (uint_least8_t mainLoop = 0; mainLoop < GAMETIME; ++mainLoop)
     {
         // Loop over the current game array state and display the next "order" that Simon will give:
         for (uint_least8_t displayLoop = 0; displayLoop < (mainLoop + 1); ++displayLoop)
@@ -186,10 +186,10 @@ void loop()
             }
 
             // If all the "orders" were correct, and there are none left, the user has won the game:
-            if (inputLoop == (gameTime - 1))
+            if (inputLoop == (GAMETIME - 1))
             {
                 delay(DELAY150);
-                for (uint_least8_t victoryLoop = 0; victoryLoop < victoryScreech; ++victoryLoop)
+                for (uint_least8_t victoryLoop = 0; victoryLoop < VICTORYSCREECH; ++victoryLoop)
                 {
                     digitalWrite(LEDPIN1, HIGH);
                     digitalWrite(LEDPIN2, HIGH);
