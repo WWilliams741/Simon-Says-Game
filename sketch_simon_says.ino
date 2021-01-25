@@ -15,6 +15,23 @@ enum LEDPINS : uint_least8_t
     LEDPIN4 = 12
 };
 
+// Extra enums for :
+enum RANDNUMS : uint_least8_t
+{
+    RAND1,
+    RAND2,
+    RAND3,
+    RAND4
+};
+
+enum DELAYS : uint_least16_t
+{
+    DELAY150 = 150,
+    DELAY300 = 300,
+    DELAY500 = 500,
+    DELAY750 = 750
+};
+
 void setup()
 {
     // initialize the pushbutton pins as input:
@@ -41,22 +58,6 @@ void loop()
 
     // Stores how many times we will do the "victory screech!" (victory loop) along with random number enum:
     const uint_least8_t VICTORYSCREECH = 3;
-    enum RANDNUMS : uint_least8_t
-    {
-        RAND1,
-        RAND2,
-        RAND3,
-        RAND4
-    };
-
-    // Stores delay values, I don't like hardcoding:
-    enum DELAYS : uint_least16_t
-    {
-        DELAY150 = 150,
-        DELAY300 = 300,
-        DELAY500 = 500,
-        DELAY750 = 750
-    };
 
     // Storing button states, default LOW:
     uint_least8_t button1 = LOW;
